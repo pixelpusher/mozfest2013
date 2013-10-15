@@ -1,0 +1,26 @@
+{
+  "name": "mozfest2013",
+  "version": "0.0.0",
+  "description": "Game show hackathon",
+  "main": "index.js",
+  "scripts": {
+    "test": "say sorry"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:pixelpusher/mozfest2013.git"
+  },
+  "keywords": [
+    "mozilla",
+    "firefox",
+    "javascript",
+    "nodejs",
+    "gameshow",
+    "game"
+  ],
+  "author": "Gameshow Hackathan Crew",
+  "license": "AGPL 3.0+",
+  "bugs": {
+    "url": "https://github.com/pixelpusher/mozfest2013/issues"
+  }
+}
