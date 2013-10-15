@@ -22,5 +22,8 @@
   "license": "AGPL 3.0+",
   "bugs": {
     "url": "https://github.com/pixelpusher/mozfest2013/issues"
+  },
+  "dependencies": {
+    "johnny-five": "~0.7.3"
   }
 }
