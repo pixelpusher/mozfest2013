@@ -23,3 +23,20 @@ by the Game Show Hack Team:
 
 Courtesy of the Ravensbourne Web Media BA (hons) course
 http://rave.ac.uk
+
+## Getting started
+
+## Pre-reqs
+- Install Ardunino IDE & find an Aruduino board
+- Wire up some buttons
+- Install node (and npm if using macports)
+
+## Do it
+- Clone this repo `git clone git@github.com:pixelpusher/mozfest2013.git`
+- `cd mozfest2013`
+- `npm install`
+- `npm start`
+
+
+See: 
+https://github.com/rwaldron/johnny-five/wiki/Getting-Started#hello-world
