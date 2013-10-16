@@ -26,12 +26,12 @@ http://rave.ac.uk
 
 ## Getting started
 
-## Pre-reqs
+**Pre-reqs**
 - Install Ardunino IDE & find an Aruduino board
 - Wire up some buttons
 - Install node (and npm if using macports)
 
-## Do it
+**Let's go!**
 - Clone this repo `git clone git@github.com:pixelpusher/mozfest2013.git`
 - `cd mozfest2013`
 - `npm install`
