@@ -10,29 +10,29 @@
 GAME SHOW HACK!
 ===============
 
-A game using Meteor, Arduino (Johnny-five), and NodeJS for the Mozilla Festival 2013 http://mozillafestival.org/
+A game using Meteor, Arduino, and NodeJS (johnny-five) for the Mozilla Festival 2013 [mozillafestival.org](http://mozillafestival.org/)
 
 by the Game Show Hack Team:
 
-- @olizilla
-- @evanraskob  
-- @_alanshaw
+- [@olizilla](https://twitter.com/olizilla)
+- [@evanraskob](https://twitter.com/evanraskob)
+- [@_alanshaw](https://twitter.com/_alanshaw)
 - James Uren
 - Adrian Law
 - Daero Ra
 
-Courtesy of the Ravensbourne Web Media BA (hons) course
-http://rave.ac.uk
+Courtesy of the Ravensbourne Web Media BA (hons) course [rave.ac.uk](http://rave.ac.uk/)
 
 ## Getting started
 
 **Pre-reqs**
-- Install Ardunino IDE & find an Aruduino board
+- Install [Git](http://git-scm.com/)
+- Install [Ardunino IDE](http://arduino.cc/en/Main/Software#toc1) & find an Arduino board
 - Wire up some buttons
-- Install node (and npm if using macports)
+- Install [Node.js](http://nodejs.org/) (and npm if using macports)
 
 **Let's go!**
-- Clone this repo `git clone git@github.com:pixelpusher/mozfest2013.git`
+- Clone this repo `git clone https://github.com/pixelpusher/mozfest2013.git`
 - `cd mozfest2013`
 - `npm install`
 - `npm start`
