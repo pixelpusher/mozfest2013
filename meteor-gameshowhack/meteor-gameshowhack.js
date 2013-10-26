@@ -85,7 +85,7 @@ Router.map(function () {
         return console.log('Buzzer ' + buzzerId + ' is eager. No question to buzz for')
       }
 
-      Question.update(question._id, $push: {buzzed: buzzerId})
+      Question.update(question._id, {$push: {buzzed: buzzerId}})
     }
   });
 });

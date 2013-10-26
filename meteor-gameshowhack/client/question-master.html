@@ -35,10 +35,9 @@
 				<h2>BUZZED</h2>
 
 				<ul class="buzzedin">
-					<li class="shake">5</li>
-					<li class="shake">4</li>
-					<li class="shake">2</li>
-					<li class="shake">1</li>
+          {{#each question.buzzed}}
+					<li class="shake">{{this}}</li>
+          {{/each}}
 				</ul>
 
 			</div>
