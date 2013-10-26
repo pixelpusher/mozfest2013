@@ -1,18 +1,24 @@
 #audience 
 {
 	background-color: black;
-	height: 3000px;
+	height: 2000px;
 }
 
 #audience h1
 {
 	color:gold;
 	text-decoration:underline;
-	font-family: Arial;
+	font-family: 'Share Tech', sans-serif;
 }
 
 #audience h2
 {
 	color:white;
 	text-decoration: none;
+  display: inline;
+}
+
+#audience h3 {
+  display: inline;
+  color: #fff;
 }
