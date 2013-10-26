@@ -1,0 +1,31 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: arial, sans-serif;
+    font-size: 48px;
+}
+#canvas {
+    background-color: black;
+    width:100%;
+    height:100%;
+}
+
+.player-1  { 
+    fill: #f8b;
+    stroke: black;
+}
+
+.player-2  { 
+    fill: yellow;
+    stroke: black;
+}
+
+.player-3  { 
+    fill: lightblue;
+    stroke: black;
+}
+
+.player-4  { 
+    fill: lightgreen;
+    stroke: black;
+}
