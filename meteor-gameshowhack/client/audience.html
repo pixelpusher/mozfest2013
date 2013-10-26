@@ -1,18 +1,24 @@
 <template name="audience">
-	<div id="audience">
-		<img src="/mozfestfull.jpg" class="img-responsive" alt="Responsive image">
+	<div class="audience-bg">
+	<div id="audience" class="container">
+		<div class="row"> <img src="/mozfestfull.jpg" class="img-responsive" alt="Responsive image"></div>
+		<div class="row">
+			<div class="col-md-12">
 	  <h1>Audience</h1>
 	  	<div id="Question">
 	  		<h2>Q.</h2>
 	  		<h3>{{question}}</h3>
 
 	  		<form>
-	  			<input type="text">
-	  			<input type="submit">
+	  			<input type="text" class="col-md-6">
+	  			<input type="submit" class="shake btn btn-default">
 	  		</form>
 
 	  	</div>
-
+	  </div>
+	</div>
 
 	</div>
+
+</div>
 </template>
