@@ -67,7 +67,9 @@ if (Meteor.isClient) {
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
+    //Template['question-master'].events({
 
+    //})
   })
 }
 
