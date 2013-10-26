@@ -59,6 +59,33 @@ Router.map(function () {
       return top5Answers
     }
   })
+
+  this.route('buzzer', {
+    
+    path: '/buzzer/:buzzerId',
+    
+    where: 'server',
+
+    action: function () {
+      var buzzerId = this.params.buzzerId
+
+      console.log('BUZZ ' + buzzerId);
+
+      // get the id
+      var question = Question.findOne()
+      
+      if (!question){
+        console.log('Buzzer ' + buzzerId + ' is eager. No question to buzz for')
+      }
+
+      this.response.writeHead(200, {
+        'Content-Type': 'text/html'
+      });
+      // this.response.writeHead('Content-Type', 'text/html');
+      this.response.write('<h1>BUZZ ' + buzzerId + '</h1>');
+      this.response.end();
+    }
+  });
 });
 
 
