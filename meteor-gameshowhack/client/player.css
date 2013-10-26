@@ -1,0 +1,18 @@
+/* PLAYER PAGE */
+#player ul.rated {
+	padding: 0px;
+}
+#player ul.rated li {
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 1.5;
+
+	margin: 5px 0px;
+	padding: 5px 10px;
+
+	display: block;
+	background-color: #ff0000;
+}
+#player ul.rated li:nth-child(2) {
+	background-color: #E81D0C;
+}
