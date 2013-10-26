@@ -1,8 +1,10 @@
 Router.map(function () {
-  this.route('home', {
-    path: '/' // match the root path
-  });
-  this.route('qm')
+  // Audience answers the questions!
+  this.route('audience', {path: '/'})
+  // Question master asks the questions!
+  this.route('question-master')
+  // Players guess what the question was!
+  this.route('player')
 });
 
 
