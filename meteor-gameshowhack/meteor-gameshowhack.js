@@ -64,6 +64,10 @@ Router.map(function () {
     }
   })
 
+  this.route('scoring')
+    
+	
+
   this.route('buzzer', {
     
     path: '/buzzer/:buzzerId',

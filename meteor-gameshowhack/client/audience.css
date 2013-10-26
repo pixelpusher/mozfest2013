@@ -15,6 +15,12 @@
 {
 	color:white;
 	text-decoration: none;
+  display: inline;
+}
+
+#audience h3 {
+  display: inline;
+  color: #fff;
 }
 
 #audience input[type="submit"] 
