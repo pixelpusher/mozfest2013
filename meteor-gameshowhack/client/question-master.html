@@ -1,5 +1,12 @@
 <template name="question-master">
   <h1>GAME! SHOW! HACK!</h1>
+  Current question: {{question.question}}<br/>
   <input type="text" name="question"/>
   <input type="submit" value="Set question"/>
+  <h2>Players</h2>
+  <ul>
+  {{#each players}}
+    <li>{{_id}} <input type="button" value="+"></li>
+  {{/each}}
+  </ul>
 </template>
