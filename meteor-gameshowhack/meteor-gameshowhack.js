@@ -7,14 +7,36 @@ Router.map(function () {
   this.route('audience', {
     path: '/',
     data: function () {
-
+      // Get the current question
+      return Question.findOne()
     }
   })
 
   // Question master asks the questions!
-  this.route('question-master')
+  this.route('question-master', {
+    data: function () {
+      return {
+        players: Players.find().fetch()
+      }
+    }
+  })
+
   // Players guess what the question was!
-  this.route('player')
+  this.route('player', {
+    data: function () {
+      // Get the current question
+      var question = Question.findOne()
+
+      if (!question) {
+        return;
+      }
+
+      var answers = Answers.find({qid: question._id})
+
+      // TODO: dedupe and count the answers
+      return {}
+    }
+  })
 });
 
 
