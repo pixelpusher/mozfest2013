@@ -50,9 +50,9 @@ Router.map(function () {
       // Sort into DESC order
       }).sort(function (a, b) {
         if (a.count > b.count) {
-          return 1
-        } else if (a.count < b.count) {
           return -1
+        } else if (a.count < b.count) {
+          return 1
         }
         return 0
       // Get just the top 5
