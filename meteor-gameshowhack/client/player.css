@@ -3,6 +3,7 @@
 	padding: 0px;
 }
 #player ul.rated li {
+	color: #000000;
 	font-size: 24px;
 	font-weight: bold;
 	line-height: 1.5;
@@ -11,8 +12,62 @@
 	padding: 5px 10px;
 
 	display: block;
-	background-color: #ff0000;
+}
+#player ul.rated li:first-child {
+	background-color: #E81D0C;
 }
 #player ul.rated li:nth-child(2) {
-	background-color: #E81D0C;
+	background-color: #FF3900;
+}
+#player ul.rated li:nth-child(3) {
+	background-color: #E85D0C;
+}
+#player ul.rated li:nth-child(4) {
+	background-color: #FF8A0D;
+}
+#player ul.rated li:nth-child(5) {
+	background-color: #FFBE0D;
+}
+
+#player h3.shake {
+	color: #000000;
+	background-color: #FF0074;
+	margin: 5px 0px;
+	padding: 5px 10px;
+}
+
+/* SHAKE animation :) */
+@keyframes shake{
+	0% { transform: translate(3px, 0); }
+	50% { transform: translate(-3px, 0); }
+	100% { transform: translate(0, 0); }
+}
+ 
+@-moz-keyframes shake{
+	0% { -moz-transform: translate(3px, 0); }
+	50% { -moz-transform: translate(-3px, 0); }
+	100% { -moz-transform: translate(0, 0); }
+}
+ 
+@-webkit-keyframes shake {
+	0% { -webkit-transform: translate(3px, 0); }
+	50% { -webkit-transform: translate(-3px, 0); }
+	100% { -webkit-transform: translate(0, 0); }
+}
+ 
+.shake {
+	animation-name: shake;
+	animation-duration: 150ms;
+	animation-iteration-count: 2;
+	animation-timing-function: linear;
+	 
+	-moz-animation-name: shake;
+	-moz-animation-duration: 150ms;
+	-moz-animation-iteration-count: 2;
+	-moz-animation-timing-function: linear;
+	 
+	-webkit-animation-name: shake;
+	-webkit-animation-duration: 150ms;
+	-webkit-animation-iteration-count: 2;
+	-webkit-animation-timing-function: linear;
 }
