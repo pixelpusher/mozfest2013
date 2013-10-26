@@ -1,3 +1,6 @@
+// The common layout for all our routes
+Router.configure({layoutTemplate: 'layout'})
+
 Router.map(function () {
   // Audience answers the questions!
   this.route('audience', {path: '/'})
