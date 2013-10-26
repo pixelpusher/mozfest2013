@@ -1,4 +1,4 @@
-#audience 
+.audience-bg 
 {
 	background-color: black;
 	height: 2000px;
@@ -15,4 +15,24 @@
 {
 	color:white;
 	text-decoration: none;
+}
+
+#audience input[type="submit"] 
+{
+	margin-left: 10px;
+	font-size: 22px;
+}
+
+#audience input[type="text"] {
+	font-size: 30px;
+	border: 2px solid #999999;
+}
+#audience input[type="text"]:focus {
+	border: 2px solid #E85D0C;
+}
+
+#Question
+{
+	font-size: 24px;
+	color: gold;
 }
