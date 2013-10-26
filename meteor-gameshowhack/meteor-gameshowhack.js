@@ -28,13 +28,34 @@ Router.map(function () {
       var question = Question.findOne()
 
       if (!question) {
-        return;
+        return console.warn("No question yet!")
       }
 
-      var answers = Answers.find({qid: question._id})
+      var answers = Answers.find({qid: question._id}).fetch()
+        , answerCounts = {} // Deduped answers with counts
 
-      // TODO: dedupe and count the answers
-      return {}
+      // Dedupe answers
+      answers.forEach(function (answer) {
+        var answerLower = answer.toLowerCase()
+        answerCounts[answerLower] = answerCounts[answerLower] || {answer: answer.answer, count: 0}
+        answerCounts[answerLower].count++
+      })
+
+      // Transform to array of answers
+      var top5Answers = Object.keys(answerCounts).map(function (answer) {
+        return answerCounts[answer]
+      // Sort into DESC order
+      }).sort(function (a, b) {
+        if (a.count > b.count) {
+          return 1
+        } else if (a.count < b.count) {
+          return -1
+        }
+        return 0
+      // Get just the top 5
+      }).slice(0, 5)
+
+      return top5Answers
     }
   })
 });
