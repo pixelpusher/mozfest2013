@@ -32,12 +32,14 @@ Router.map(function () {
         return console.warn("No question yet!")
       }
 
+      console.log("Found current question", question.question)
+
       var answers = Answers.find({qid: question._id}).fetch()
         , answerCounts = {} // Deduped answers with counts
 
       // Dedupe answers
       answers.forEach(function (answer) {
-        var answerLower = answer.toLowerCase()
+        var answerLower = answer.answer.toLowerCase()
         answerCounts[answerLower] = answerCounts[answerLower] || {answer: answer.answer, count: 0}
         answerCounts[answerLower].count++
       })
@@ -56,7 +58,9 @@ Router.map(function () {
       // Get just the top 5
       }).slice(0, 5)
 
-      return top5Answers
+      console.log("Top 5 answers are", top5Answers)
+
+      return {answers: top5Answers}
     }
   })
 
@@ -107,7 +111,10 @@ if (Meteor.isClient) {
 
       console.log("Adding answer", answer, "to question", question.question)
 
-      Answers.insert({qid: question._id, answer: answer})
+      Answers.insert({qid: question._id, answer: answer}, function (er) {
+        if (er) return console.error("Failed to add new answer")
+        tpl.find("input[type=text]").value = ""
+      })
     }
   })
 
@@ -134,6 +141,7 @@ if (Meteor.isClient) {
       Question.insert({question: newQuestion, buzzed:[]}, function (er) {
         if (er) return console.error("Failed to add new question")
         console.log("Set new question", newQuestion)
+        tpl.find("input[type=text]").value = ""
       })
     }
   })
