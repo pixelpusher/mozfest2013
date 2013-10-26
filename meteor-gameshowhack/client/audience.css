@@ -1,6 +1,7 @@
 #audience 
 {
-	height: 1000px;
+	background-color: black;
+	height: 3000px;
 }
 
 #audience h1
@@ -12,5 +13,6 @@
 
 #audience h2
 {
+	color:white;
 	text-decoration: none;
 }

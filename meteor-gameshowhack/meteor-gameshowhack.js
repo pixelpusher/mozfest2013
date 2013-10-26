@@ -71,19 +71,21 @@ Router.map(function () {
 
       console.log('BUZZ ' + buzzerId);
 
-      // get the id
-      var question = Question.findOne()
-      
-      if (!question){
-        console.log('Buzzer ' + buzzerId + ' is eager. No question to buzz for')
-      }
-
       this.response.writeHead(200, {
         'Content-Type': 'text/html'
       });
       // this.response.writeHead('Content-Type', 'text/html');
       this.response.write('<h1>BUZZ ' + buzzerId + '</h1>');
       this.response.end();
+
+      // get the id
+      var question = Question.findOne()
+      
+      if (!question){
+        return console.log('Buzzer ' + buzzerId + ' is eager. No question to buzz for')
+      }
+
+      Question.update(question._id, $push: {buzzed: buzzerId})
     }
   });
 });
@@ -129,7 +131,7 @@ if (Meteor.isClient) {
       console.log("New question will be", newQuestion)
 
       // Add a new question
-      Question.insert({question: newQuestion}, function (er) {
+      Question.insert({question: newQuestion, buzzed:[]}, function (er) {
         if (er) return console.error("Failed to add new question")
         console.log("Set new question", newQuestion)
       })
