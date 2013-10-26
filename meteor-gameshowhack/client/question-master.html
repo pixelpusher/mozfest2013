@@ -1,12 +1,48 @@
 <template name="question-master">
-  <h1>GAME! SHOW! HACK!</h1>
-  Current question: {{question.question}}<br/>
-  <input type="text" name="question"/>
-  <input type="submit" value="Set question"/>
-  <h2>Players</h2>
-  <ul>
-  {{#each players}}
-    <li>{{_id}} <input type="button" value="+"></li>
-  {{/each}}
-  </ul>
+	<div id="master" class="container">
+		<div class="row">
+			<div class="col-md-12">
+
+				<h1>GAME! SHOW! HACK!</h1>
+
+				<h4 class="current">Current question: {{question.question}}</h4>
+
+				<form class="master-form" role="form">
+					<div class="form-group">
+						<input type="text" class="col-md-6" name="question"/>
+						<input type="submit"  class="shake btn btn-default" value="Set question"/>
+					</div>
+				</form>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+
+				<h2>Players</h2>
+
+				<ul class="players col-md-6">
+					{{#each players}}
+					<li>{{_id}} <input type="button" class="btn btn-default" value="+"></li>
+					{{/each}}
+				</ul>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+
+				<h2>BUZZED</h2>
+
+				<ul class="buzzedin">
+					<li class="shake">5</li>
+					<li class="shake">4</li>
+					<li class="shake">2</li>
+					<li class="shake">1</li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+
 </template>

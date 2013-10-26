@@ -14,10 +14,47 @@
 	padding: 0px;
 }
 #master ul.players li {
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 1.5;
+	color:#000000;
+
 	list-style: none;
-	font-size: 18px;
 	margin: 5px 0px;
+	padding: 5px 10px;
 }
 #master ul.players li input {
 	font-size: 18px;
+	margin-left: 20px;
+}
+
+#master .current {
+	color: #000000;
+	background-color: #FF0074;
+	margin: 5px 0px;
+	padding: 5px 10px;
+}
+
+
+#master ul.players li:first-child:hover {
+	background-color: #E81D0C;
+}
+#master ul.players li:nth-child(2):hover {
+	background-color: #FF3900;
+}
+#master ul.players li:nth-child(3):hover {
+	background-color: #E85D0C;
+}
+#master ul.players li:nth-child(4):hover {
+	background-color: #FF8A0D;
+}
+#master ul.players li:nth-child(5):hover {
+	background-color: #FFBE0D;
+}
+
+#master ul.buzzedin li {
+	background-color: #FF0074;
+	display: inline-block;
+	padding: 5px 20px;
+	font-size: 24px;
 }
