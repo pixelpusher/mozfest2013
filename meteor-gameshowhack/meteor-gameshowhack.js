@@ -16,6 +16,7 @@ Router.map(function () {
   this.route('question-master', {
     data: function () {
       return {
+        question: Question.findOne(),
         players: Players.find().fetch()
       }
     }
@@ -89,15 +90,36 @@ Router.map(function () {
 
 
 if (Meteor.isClient) {
+  Template["question-master"].events({
+    "click input[type=submit]": function (evt, tpl) {
+      evt.preventDefault()
 
+      var question = Question.findOne()
+
+      // Remove the current question
+      if (question) {
+        console.log("Removing old question", question.question);
+
+        Question.remove(question._id, function (er) {
+          if (er) return console.error("Failed to delete current question")
+        })
+      }
+
+      var newQuestion = tpl.find("input[type=text]").value
+
+      console.log("New question will be", newQuestion)
+
+      // Add a new question
+      Question.insert({question: newQuestion}, function (er) {
+        if (er) return console.error("Failed to add new question")
+        console.log("Set new question", newQuestion)
+      })
+    }
+  })
 }
 
 if (Meteor.isServer) {
-  Meteor.startup(function () {
-    //Template['question-master'].events({
-
-    //})
-  })
+  Meteor.startup(function () {})
 }
 
 // Stores the current question
