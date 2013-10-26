@@ -92,6 +92,25 @@ Router.map(function () {
 
 
 if (Meteor.isClient) {
+
+  Template.audience.events({
+    "click input[type=submit]": function (evt, tpl) {
+      evt.preventDefault()
+
+      var question = Question.findOne()
+
+      if (!question) {
+        return console.warn("Cannot answer null question")
+      }
+
+      var answer = tpl.find("input[type=text]").value
+
+      console.log("Adding answer", answer, "to question", question.question)
+
+      Answers.insert({qid: question._id, answer: answer})
+    }
+  })
+
   Template["question-master"].events({
     "click input[type=submit]": function (evt, tpl) {
       evt.preventDefault()
@@ -100,7 +119,7 @@ if (Meteor.isClient) {
 
       // Remove the current question
       if (question) {
-        console.log("Removing old question", question.question);
+        console.log("Removing old question", question.question)
 
         Question.remove(question._id, function (er) {
           if (er) return console.error("Failed to delete current question")
