@@ -88,7 +88,8 @@ function addScore(playerIndex) {
     //});
 }
 
-function addRandomScore() {
+
+addRandomScore = function() {
     var playerIndex = parseInt(Math.random() * scores.length, 10);
     scores[ playerIndex ]++;
     console.log(playerIndex);

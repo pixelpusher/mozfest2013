@@ -64,7 +64,7 @@ Router.map(function () {
     }
   })
 
-  this.route('scoring')
+  this.route('scoring' )
     
 	
 
@@ -149,6 +149,11 @@ if (Meteor.isClient) {
       })
     }
   })
+
+  Template.scoring.rendered = function() {
+    console.log('DID SCORING');
+
+  }
 }
 
 if (Meteor.isServer) {
